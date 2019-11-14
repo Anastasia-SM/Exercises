@@ -1,0 +1,12 @@
+11
+APPOINT 2 10:30 30 2 andrey alex
+APPOINT 2 11:20 10 3 alex sergey alexandra
+APPOINT 2 12:00 30 3 victoria andrey alex
+APPOINT 1 10:00 40 2 alexandra victor
+APPOINT 2 11:10 5 4 andrey alex alexandra victoria
+APPOINT 3 10:40 50 2 victoria sergey
+APPOINT 2 10:40 50 2 victoria andrey
+PRINT 1 alex
+PRINT 2 sergey
+PRINT 1 alexandra
+PRINT 2 victoria
