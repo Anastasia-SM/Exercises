@@ -58,27 +58,31 @@ int main()
 	vector<appoint> appointments; // Вектор элементов, содержащих данные о встречах
 	ifstream file("Meetings.txt");		// файл с запросами
 
-	file >> n;
-
-	for (int i = 0; i < n; i++)
+	if (!file)
+		cout << "\nCant find the file";
+	else
 	{
-		file >>a;	// считываем первое слово запроса
+		file >> n;
+		for (int i = 0; i < n; i++)
+		{
+			file >>a;	// считываем первое слово запроса
 
-		if (a == "APPOINT")
-		{
-			make_an_appointment(file, appointments);
+			if (a == "APPOINT")
+			{
+				make_an_appointment(file, appointments);
+			}
+			else if (a == "PRINT")
+			{
+				print_an_appointment(file, appointments);
+			}
+			else
+			{
+				cout << "\nIncorrect input\n";
+			}
 		}
-		else if (a == "PRINT")
-		{
-			print_an_appointment(file, appointments);
-		}
-		else
-		{
-			cout << "\nIncorrect input\n";
-		}
+		n = 0;
+		file.close();
 	}
-	n = 0;
-	file.close();
 }
 
 void make_an_appointment(ifstream& file, vector<appoint>& appointments)

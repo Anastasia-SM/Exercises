@@ -1,0 +1,5 @@
+¬вод:
+"AAABBDCCCFFFFFFFFFFFWWKKDA"
+
+ќжидаемый результат - вывод:
+A3B2DC3F11W2K2DA
